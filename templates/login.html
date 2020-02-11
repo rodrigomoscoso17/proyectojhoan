@@ -1,107 +1,28 @@
-{% extends 'layout.html' %}
-{% block body %}
 
-<style>
-    h1{
-        color: aliceblue;
-    }
-    .form-group label {
-        color: aliceblue !important;
-        border-color: var(--second-color) !important;
-    }
 
-    body {
-        background: url(../static/img/background-dog.jpg) no-repeat center center fixed ;
-        background-size: cover ;
-    }
 
-    .main-section {
-        margin: 0 auto;
-        margin-top: 25%;
-        padding: 0;
 
-    }
 
-    .user-img {
-        margin-top: 50px;
-        margin-bottom: 35px;
-    }
-
-    .user-img img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .modal-content {
-        background-color: #3b4652 !important;
-        opacity: .95;
-        padding: 0 20px;
-        box-shadow: 0px 0px 3px #848484;
-        border-radius: 10px;
-    }
-    .form-group input{
-        height: 42px;
-        font-size: 18px;
-        border: 0;
-        padding-left: 54px;
-        border-radius: 5px;
-    }
-
-    .form-group::before{
-        font-family: "Font Awesome\ 5 Free";
-        position: absolute;
-        left: 28px;
-        font-size: 22px;
-        padding-top: 36px;
-    }
-
-    .form-group#user-group::before{
-        content: "\f2bd";
-    }
-
-    .form-group#contrasena-group::before{
-        content: "\f52a";
-    }
-
-    button{
-        width: 60%;
-        margin: 5px 0 25px;
-    }
-
-    .forgot{
-        padding: 5px 0;
-    }
-
-    .forgot a{
-        color: aliceblue;
-    }
-
-</style>
 
 <div class="modal-dialog text-center">
     <div class="col-sm-8 main-section">
         <div class="modal-content">
             <h1 class="pt-5">Login</h1>
-            <div class="col-12 user-img">
-                <img src="/static/img/avatar.png" alt="avatarpng">
-            </div>
+           
             <form action="" method="POST" class="col-12">
                 <div class="form-group" id="user-group">
                     <label>Usuario:</label>
-                    <input type="text" name="usuario" class="form-control" value="{{request.form.usuario}}"
+                    <input type="text" name="usuario" class="form-control" value=""
                         placeholder="Enter Your Nickname">
                 </div>
                 <div class="form-group" id="contrasena-group">
                     <label>Contraseña:</label>
-                    <input type="password" name="password" class="form-control" value="{{request.form.password}}"
+                    <input type="password" name="password" class="form-control" value=""
                         placeholder="Enter Your Password">
                 </div>
                 <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> INGRESAR</button>
             </form>
-            <div class="col-12 forgot">
-                <a href="#">Recordar Contraseña</a>
-            </div>
+            
         </div>
     </div>
 </div>
-{% endblock %}
